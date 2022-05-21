@@ -19,10 +19,30 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "토스트 띄우기", Toast.LENGTH_SHORT).show()
         }
 
-        btnToast.setOnClickListener {
+        btnVariable.setOnClickListener {
             var name1 : String = "김철수"
             val name2 : String = "이영희"
 
+            Log.d("변수", name1)
+            Log.d("변수", name2)
+
+            Toast.makeText(this, name1, Toast.LENGTH_SHORT).show()
+        }
+
+        btnCondition.setOnClickListener {
+            val userAge = 40
+
+            if (userAge >= 20) {
+                Toast.makeText(this, "성인입니다", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "그래도 성인입니다", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+
+        btnCopy.setOnClickListener {
+            val inputMsg = editMsg.text.toString()
+            txtMsg.text = inputMsg
         }
 
     }
