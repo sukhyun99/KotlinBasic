@@ -18,5 +18,12 @@ class MainActivity : AppCompatActivity() {
         btnToast.setOnClickListener {
             Toast.makeText(this, "토스트 띄우기", Toast.LENGTH_SHORT).show()
         }
+
+        btnToast.setOnClickListener {
+            var name1 : String = "김철수"
+            val name2 : String = "이영희"
+
+        }
+
     }
 }
